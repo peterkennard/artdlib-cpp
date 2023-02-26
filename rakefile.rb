@@ -5,7 +5,7 @@ module Rakish
 
 dependsList = [];
 
-    cfg = BuildConfig("root");
+  #  cfg = BuildConfig("root");
 
     dependsList << './artd-lib-logger';
 
