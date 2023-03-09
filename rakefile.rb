@@ -3,15 +3,22 @@ require "#{myDir}/build-options.rb";
 
 module Rakish
 
-dependsList = [];
-
   #  cfg = BuildConfig("root");
 
-    dependsList << './artd-lib-logger';
-
 Rakish.Project(
-    :dependsUpon=>dependsList
+    :includes    => [Rakish::GitModule],
+	:name 		 => "artdlib-cpp",
+    :dependsUpon => [
+        './artd-lib-logger'
+    ],
+    :dependsUponOpt => [
+	    './artd-jlib-base'
+    ]
 ) do
+
+    export task :setup => [] do
+    	git.clone("git.livingwork.com:/home/artd/newartd/artd-jlib-base", "#{projectDir}/artd-jlib-base");
+    end
 
 end
 
