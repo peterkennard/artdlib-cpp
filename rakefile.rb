@@ -14,11 +14,11 @@ dependsList = [];
 Rakish.Project(
     :includes    => [Rakish::GitModule],
 	:name 		 => "artdlib-cpp",
-    :dependsUpon => dependsList
+    :dependsUponOpt => dependsList
 ) do
 
     export task :setup => [] do
-    	git.clone("git.livingwork.com:/home/artd/newartd/artd-jlib-base", "#{myDir}/artd-jlib-base");
+    	git.clone("git.livingwork.com:/home/artd/newartd/artd-jlib-base", "#{projectDir}/artd-jlib-base");
     end
 
 end
