@@ -9,7 +9,10 @@ dependsList = [];
   #  cfg = BuildConfig("root");
 
     dependsList << './artd-lib-logger';
+    dependsList << './artd-lib-vecmath';
     dependsList << './artd-jlib-base';
+    dependsList << './artd-jlib-thread';
+
 
 Rakish.Project(
     :includes    => [Rakish::GitModule],
@@ -19,6 +22,8 @@ Rakish.Project(
 
     export task :setup => [] do
     	git.clone("git.livingwork.com:/home/artd/newartd/artd-jlib-base", "#{projectDir}/artd-jlib-base");
+    	git.clone("git.livingwork.com:/home/artd/newartd/artd-jlib-thread", "#{projectDir}/artd-jlib-thread");
+    	git.clone("git.livingwork.com:/home/artd/newartd/artd-lib-vecmath", "#{projectDir}/artd-lib-vecmath");
     end
 
 end
