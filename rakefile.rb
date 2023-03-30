@@ -6,13 +6,14 @@ module Rakish
 
 dependsList = [];
 
+unless (ARGV.length > 0 && (ARGV[0] =~ /setup/))
   #  cfg = BuildConfig("root");
 
    dependsList << './artd-lib-logger';
    dependsList << './artd-lib-vecmath';
    dependsList << './artd-jlib-base';
    dependsList << './artd-jlib-thread';
-
+end
 
 Rakish.Project(
     :includes    => [Rakish::GitModule],
