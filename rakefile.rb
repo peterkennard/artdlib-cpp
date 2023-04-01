@@ -6,7 +6,7 @@ module Rakish
 
 dependsList = [];
 
-unless (ARGV.length > 0 && (ARGV[0] =~ /setup/))
+unless inSetupTask()
   #  cfg = BuildConfig("root");
 
    dependsList << './artd-lib-logger';
