@@ -13,6 +13,7 @@ unless inSetupTask()
    dependsList << './artd-lib-vecmath';
    dependsList << './artd-jlib-base';
    dependsList << './artd-jlib-thread';
+   dependsList << './artd-jlib-io';
 end
 
 Rakish.Project(
@@ -25,6 +26,7 @@ Rakish.Project(
  	    git.clone("https://github.com/peterkennard/artd-lib-logger.git", "#{projectDir}/artd-lib-logger");
     	git.clone("https://github.com/peterkennard/artd-jlib-base", "#{projectDir}/artd-jlib-base");
     	git.clone("https://github.com/peterkennard/artd-jlib-thread.git", "#{projectDir}/artd-jlib-thread");
+    #	git.clone("https://github.com/peterkennard/artd-jlib-io.git", "#{projectDir}/artd-jlib-thread");
     	git.clone("https://github.com/peterkennard/artd-lib-vecmath.git", "#{projectDir}/artd-lib-vecmath");
     end
 
