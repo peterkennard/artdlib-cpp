@@ -29,7 +29,7 @@ Rakish.Project(
     	git.clone("https://github.com/peterkennard/artd-jlib-thread.git", "#{projectDir}/artd-jlib-thread");
     	git.clone("https://github.com/peterkennard/artd-lib-vecmath.git", "#{projectDir}/artd-lib-vecmath");
     	git.cloneIfAvailable("https://github.com/peterkennard/artd-jlib-io.git", "#{projectDir}/artd-jlib-io");
-    	git.cloneIfAvailable("git.livingwork.com:/home/artd/github/artf-jlib-net.git", "#{projectDir}/artd-jlib-net");
+    	git.cloneIfAvailable("git.livingwork.com:/home/artd/github/artd-jlib-net.git", "#{projectDir}/artd-jlib-net");
     end
 
 end
